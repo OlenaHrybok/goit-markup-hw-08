@@ -1,0 +1,47 @@
+.follow {
+    @extend %ul;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    text-transform: uppercase;
+    margin-top: 16px;
+    &-icon {
+        fill: #FFFFFF;
+    }
+}
+.follow-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16/14);
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.follow-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    &:not(:last-child) {
+            margin-right: 10px;
+        }
+}
+.follow-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus, &:hover {
+        background-color: $accent-color;
+    }
+}
+.follow-main {
+    display: block;
+    margin-top: 12px;
+    margin-left: 70px;
+}

@@ -1,0 +1,84 @@
+.site-nav {
+    @extend %ul;
+    display: flex;
+    margin-left: var(--typical-padding);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    & .link {
+            color: $title-text-color;
+            letter-spacing: 0.02em;
+            font-weight: 500;
+            text-decoration: none;
+            line-height: 1.14;
+    
+            &:focus,
+            &:hover {
+                color: $accent-color;
+            }
+        }
+}
+.site-nav .link.current {
+    color: $accent-color;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.14;
+    &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            border-bottom: 4px solid #2196F3;
+            border-radius: 2px;
+            bottom: -34px;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            color: $accent-color;
+        }
+}
+.site-face {
+    position: relative;
+    &:not(:last-child) {
+            margin-right: 50px;
+    }
+}
+.header-icon-mail {
+    width: 16px;
+    height: 12px;
+    fill: $primary-text-color;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .contacts-adress:focus &,
+    .contacts-adress:hover & {
+        fill: $accent-color;
+    }
+}
+.contacts-adress {
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+    color: $primary-text-color;
+    text-decoration: none;
+    line-height: 1.71;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover ,&:focus {
+        color: $accent-color;
+    }
+}
+.header-icon-phone {
+    width: 10px;
+    height: 16px;
+    fill: $primary-text-color;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        .contacts-adress:focus &,
+        .contacts-adress:hover &{
+            fill: $accent-color;
+        }
+}
+.header-right {
+    @extend %ul;
+}
