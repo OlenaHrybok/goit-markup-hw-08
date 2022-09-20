@@ -38,7 +38,16 @@
     letter-spacing: 0.03em;
     margin-bottom: 50px;
     text-align: center;
+    @media screen and (min-width:480px) {
+        font-size: 28px;
+    }
 }
 .advantage__image {
     display: block;
+}
+.advantage {
+    display: none;
+    @media screen and (min-width: 1198.98px) {
+        display: contents;
+        }
 }
